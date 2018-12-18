@@ -21,7 +21,7 @@ steps:
 - script: dotnet tool install --global SemanticRelease.GlobalTool
   displayName: 'install semantic release'
 
-- script: semantic-release -b master -p $(Build.Repository.LocalPath)/Oocx.AspNetCore.LinkHeader/Oocx.AspNetCore.LinkHeader/Oocx.AspNetCore.LinkHeader.csproj release
+- script: semantic-release -d -p $(Build.Repository.LocalPath)/Oocx.AspNetCore.LinkHeader/Oocx.AspNetCore.LinkHeader/Oocx.AspNetCore.LinkHeader.csproj release
   displayName: 'set version number'  
 
 - script: dotnet build --configuration $(buildConfiguration)
